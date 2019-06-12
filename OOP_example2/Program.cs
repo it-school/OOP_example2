@@ -93,8 +93,7 @@ namespace OOP_example2
 
             Book book1 = new Book("White tooth", publisher1, "Jack London, Lina Kostenko");
             Console.WriteLine(book1);
-
-            
+                        
             Book book2 = new Book("12 chairs", publisher1, new Author[] { author5, author6});
             Console.WriteLine(book2);
         }    
