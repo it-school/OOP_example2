@@ -47,6 +47,15 @@ namespace OOP_example2
             Country = "";
         }
 
+        public Author(Author author)
+        {
+            this.name = author.name;
+            this.birthday = author.birthday;
+            this.sex = author.sex;
+            this.deathday = author.deathday;
+            this.country = author.country;
+        }
+
         public override string ToString()
         {
             return $"{Name}{(country.Equals("") ? "" : " (" + Country + ")")}" +

@@ -94,8 +94,44 @@ namespace OOP_example2
             Book book1 = new Book("White tooth", publisher1, "Jack London, Lina Kostenko");
             Console.WriteLine(book1);
                         
-            Book book2 = new Book("12 chairs", publisher1, new Author[] { author5, author6});
+            LibraryBook book2 = new LibraryBook("12 chairs", publisher1, new Author[] { author5, author6});
+            LibraryBook book3 = new LibraryBook("10 black children", publisher1, new Author[] { author5, author6});
+            LibraryBook book4 = new LibraryBook("3 pigs", publisher1, new Author[] { author5, author6});
             Console.WriteLine(book2);
-        }    
+
+              
+            LibraryBook nullbook = new LibraryBook("", null, null);
+            Library library = new Library();
+            library.Add(null);
+            library.Add(book2);
+            library.Add(nullbook);
+            library.Add(book3);
+            library.Add(book4);
+
+            Console.WriteLine(library);
+
+
+            Console.WriteLine(library.Remove(2));
+            Console.WriteLine(library.Remove(2));
+
+            Console.WriteLine(library);
+
+            LibraryBook temp = library.BookAt(6);
+            Console.WriteLine(temp == null ? "No book" : temp.ToString());
+
+            Console.WriteLine(library.FindByTitle("3"));
+
+            Int32 q = new Int32();
+            Console.WriteLine(q);
+            int? o = null;
+            Console.WriteLine("--- "+o.GetType()+" ----");
+            //Console.WriteLine((o == null ? "null" : o));
+            Console.WriteLine("\n----\n");
+            var a = q;
+            Console.WriteLine(a);
+            var b = o;
+            Console.WriteLine(b);
+            
+        }
     }
 }

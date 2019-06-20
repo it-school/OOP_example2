@@ -17,6 +17,12 @@ namespace OOP_example2
             Country = country;
         }
 
+        public Publisher(Publisher publisher)
+        {
+            this.Country = publisher.Country;
+            this.Title = publisher.Title;
+        }
+
         public override string ToString()
         {
             return $"Publisher: {Title} ({Country})";
